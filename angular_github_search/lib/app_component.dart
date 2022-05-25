@@ -1,6 +1,7 @@
 import 'package:angular/angular.dart';
+import 'package:common_github_search/common_github_search.dart';
 
-import 'src/todo_list/todo_list_component.dart';
+import 'src/components/search_form_component/search_form_component.dart';
 
 // AngularDart info: https://angulardart.xyz
 // Components info: https://angulardart.xyz/components
@@ -12,8 +13,11 @@ import 'src/todo_list/todo_list_component.dart';
   selector: 'my-app',
   styleUrls: ['app_component.css'],
   templateUrl: 'app_component.html',
-  directives: [TodoListComponent],
+  directives: [SearchFormComponent],
 )
 class AppComponent {
-  // Nothing here yet. All logic is in TodoListComponent.
+  final GithubRepository githubRepository = GithubRepository(
+    GithubCache(),
+    GithubClient(),
+  );
 }
