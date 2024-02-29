@@ -1,4 +1,4 @@
-import 'github_user.dart';
+import 'package:common_github_search/common_github_search.dart';
 
 class SearchResultItem {
   const SearchResultItem({

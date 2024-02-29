@@ -1,12 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:stream_transform/stream_transform.dart';
 
-import '../helpers/github_repository.dart';
-import '../models/search_result_error.dart';
-import 'github_search_event.dart';
-import 'github_search_state.dart';
+import 'package:common_github_search/common_github_search.dart';
 
-const _duration = const Duration(milliseconds: 300);
+const _duration = Duration(milliseconds: 300);
 
 EventTransformer<Event> debounce<Event>(Duration duration) {
   return (events, mapper) => events.debounce(duration).switchMap(mapper);

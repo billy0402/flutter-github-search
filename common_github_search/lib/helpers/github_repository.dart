@@ -1,8 +1,6 @@
 import 'dart:async';
 
-import 'github_cache.dart';
-import 'github_client.dart';
-import '../models/search_result.dart';
+import 'package:common_github_search/common_github_search.dart';
 
 class GithubRepository {
   const GithubRepository(this.cache, this.client);
