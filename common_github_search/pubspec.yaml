@@ -1,18 +1,19 @@
 name: common_github_search
 description: Shared Code between AngularDart and Flutter.
-version: 1.0.0
+version: 1.0.0+1
 repository: https://github.com/billy0402/flutter-github-search
+publish_to: none
 
 environment:
-  sdk: '>=2.16.2 <3.0.0'
+  sdk: '>=3.0.0 <4.0.0'
 
 # Add regular dependencies here.
 dependencies:
-  bloc: ^8.0.3
-  equatable: ^2.0.3
-  http: ^0.13.4
-  stream_transform: ^2.0.0
+  bloc: ^8.1.3
+  equatable: ^2.0.5
+  http: ^1.2.0
+  stream_transform: ^2.1.0
 
 dev_dependencies:
-  lints: ^2.1.0
-  test: ^1.24.0
+  lints: ^3.0.0
+  test: ^1.25.2
