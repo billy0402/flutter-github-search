@@ -1,10 +1,11 @@
-import 'package:common_github_search/common_github_search.dart'
-    as common_github_search;
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'package:common_github_search/common_github_search.dart'
+    as common_github_search;
+
 class SearchResultItem extends StatelessWidget {
-  const SearchResultItem({Key? key, required this.item}) : super(key: key);
+  const SearchResultItem({super.key, required this.item});
 
   final common_github_search.SearchResultItem item;
 

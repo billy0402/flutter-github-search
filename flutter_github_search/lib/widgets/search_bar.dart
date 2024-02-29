@@ -1,16 +1,17 @@
-import 'package:common_github_search/common_github_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'package:common_github_search/common_github_search.dart';
+
 class SearchBar extends StatefulWidget {
-  const SearchBar({Key? key}) : super(key: key);
+  const SearchBar({super.key});
 
   @override
-  State<SearchBar> createState() => SearchBarState();
+  State<SearchBar> createState() => _SearchBarState();
 }
 
-class SearchBarState extends State<SearchBar> {
-  final TextEditingController _textController = TextEditingController();
+class _SearchBarState extends State<SearchBar> {
+  final _textController = TextEditingController();
   late GithubSearchBloc _githubSearchBloc;
 
   @override
