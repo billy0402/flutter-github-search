@@ -1,26 +1,24 @@
-import 'package:angular/angular.dart';
+import 'package:ngdart/angular.dart';
 import 'package:angular_bloc/angular_bloc.dart';
 
 import 'package:common_github_search/common_github_search.dart';
 
-import '../search_bar_component/search_bar_component.dart';
-import '../search_body_component/search_body_component.dart';
+import 'package:angular_github_search/src/components/components.dart';
 
 @Component(
-    selector: 'search-form',
-    templateUrl: 'search_form_component.html',
-    directives: [
-      SearchBarComponent,
-      SearchBodyComponent,
-    ],
-    pipes: [
-      BlocPipe
-    ])
+  selector: 'search-form',
+  templateUrl: 'search_form_component.html',
+  directives: [
+    SearchBarComponent,
+    SearchBodyComponent,
+  ],
+  pipes: [BlocPipe],
+)
 class SearchFormComponent implements OnInit, OnDestroy {
   @Input()
-  GithubRepository githubRepository;
+  late GithubRepository githubRepository;
 
-  GithubSearchBloc githubSearchBloc;
+  late GithubSearchBloc githubSearchBloc;
 
   @override
   void ngOnInit() {

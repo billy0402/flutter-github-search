@@ -1,8 +1,8 @@
-import 'package:angular/angular.dart';
+import 'package:ngdart/angular.dart';
 
 import 'package:common_github_search/common_github_search.dart';
 
-import '../search_results_component/search_results_component.dart';
+import 'package:angular_github_search/src/components/components.dart';
 
 @Component(
   selector: 'search-body',
@@ -14,7 +14,7 @@ import '../search_results_component/search_results_component.dart';
 )
 class SearchBodyComponent {
   @Input()
-  GithubSearchState state;
+  late GithubSearchState state;
 
   bool get isEmpty => state is SearchStateEmpty;
   bool get isLoading => state is SearchStateLoading;

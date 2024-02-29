@@ -1,13 +1,8 @@
-import 'package:angular/angular.dart';
+import 'package:ngdart/angular.dart';
+
 import 'package:common_github_search/common_github_search.dart';
 
-import 'src/components/search_form_component/search_form_component.dart';
-
-// AngularDart info: https://angulardart.xyz
-// Components info: https://angulardart.xyz/components
-//
-// (If the links still point to the old Dart-lang repo, go here:
-// https://pub.dev/ngcomponents)
+import 'package:angular_github_search/src/components/components.dart';
 
 @Component(
   selector: 'my-app',
@@ -16,7 +11,7 @@ import 'src/components/search_form_component/search_form_component.dart';
   directives: [SearchFormComponent],
 )
 class AppComponent {
-  final GithubRepository githubRepository = GithubRepository(
+  final githubRepository = GithubRepository(
     GithubCache(),
     GithubClient(),
   );
